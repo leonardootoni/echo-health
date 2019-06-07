@@ -1,0 +1,81 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>
+                Appointment Details
+
+            </h3>
+
+            <?php if(isset($appointmentDetail)) : 
+           
+            ?>
+            <?php foreach ($appointmentDetail as $appointment){
+            
+            
+            ?>
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <form role="form">
+                        <div class="form-group">
+
+                            <!-- <label for="patientID">
+                                Patient ID
+                            </label> -->
+                            <input type="text" class="form-control" id="patientID" value="<?=$appointment->getId()?>" hidden/>
+                            <input type="text" class="form-control" id="apptID" value="<?=$appointment->getApptId()?>" hidden/>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="firstname">
+                                First Name
+                            </label>
+                            <input type="text" class="form-control" id="firstname" value="<?=$appointment->getFirstName()?>"disabled/>
+                        </div>
+                        <div class="form-group">
+
+                            <label for="lastname">
+                                Last Name
+                            </label>
+                            <input type="text" class="form-control" id="lastname"value="<?=$appointment->getLastName()?>" disabled/>
+                        </div>
+                        <div class="form-group">
+
+                            <label for="birthday">
+                                Birthday
+                            </label>
+                            <input type="text" class="form-control" id="birthday" value="<?=$appointment->getBirthday()?>" disabled/>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="status">
+                                Status
+                            </label>
+                            <input type="text" class="form-control" id="stuats" value="<?=$appointment->getStatus()?>" disabled/>
+                            
+                        </div>
+                        
+                        <div class="from-group">
+                            
+                       <a class='btn btn-block btn-lg btn-primary' role='button' href='treatpatient?id=<?=$appointment->getApptId()?>'>Treat Patient</a>
+                       
+                       <a class='btn btn-block btn-lg btn-primary' role='button' href='changeappointment?id=<?=$appointment->getApptId()?>&from=<?=$appointment->getFrom()?>'>Change Appointment Details</a>
+                       <a class='btn btn-block btn-lg btn-primary' role='button' href='medicalhistory?id=<?=$appointment->getId()?>'>View Medical History</a>
+                    </div>
+                   
+                      
+                    </form>
+                </div>
+                <div class="col-md-6">
+                </div>
+                
+            </div>
+            <?php }?>
+            <?php endif;?>
+       
+            
+        </div>
+    </div>
+</div>

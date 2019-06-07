@@ -1,0 +1,6 @@
+.DS_Store
+.vscode
+wordcounter.ts
+/vendor/
+.idea
+app.ini

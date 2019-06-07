@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-end align-items-center">
+    <div class="mt-1 mb-1">
+        <button id="saveButton" type="button" class="btn btn-primary">Save</button>
+    </div>
+</div>
+<div class="card">
+    <div class="card-box bg-white p-4">
+        <form id="changeEmailForm">
+            <div class="form-group row">
+                <label for="currentEmail" class="col-sm-2 col-form-label">Email:</label>
+                <div class="col-sm-6">
+                    <input type="email" readonly class="form-control-plaintext" id="currentEmail" name="currentEmail" value="<?=$currentEmail?>">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="newEmail" class="col-sm-2 col-form-label">New Email:</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" id="newEmail" name="newEmail" value="<?=$newEmail?>" placeholder="Enter a new email" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="newEmail" class="col-sm-2 col-form-label">Password:</label>
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter Current Password" required>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
